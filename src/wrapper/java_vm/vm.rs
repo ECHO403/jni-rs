@@ -985,7 +985,7 @@ unsafe fn sys_attach_current_thread(
         name: config
             .name
             .as_ref()
-            .map(|s| s.as_ptr() as *mut u8)
+            .map(|s| s.as_ptr() as *mut c_char)
             .unwrap_or(ptr::null_mut()),
         group: config
             .group
